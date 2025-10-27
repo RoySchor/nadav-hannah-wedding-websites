@@ -30,7 +30,7 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
       case "slideUp":
         return `translateY(calc(-1 * (var(--env-h, 300px) * 0.9))) scale(1.05) ${rotate}`;
       case "scaleUp":
-        return `translateY(calc(-1 * (var(--env-h, 300px) * 0.45))) scale(1.3) ${rotate}`;
+        return `translateX(-75%) translateY(calc(-1 * (var(--env-h, 300px) * 0.45))) scale(1.3) ${rotate}`;
       default:
         return `translateY(0) scale(1) ${rotate}`;
     }
