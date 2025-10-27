@@ -4,8 +4,9 @@ import clsx from "clsx";
 /**
  * Phases:
  *  - "closed": envelope closed
- *  - "open": top flap opens
- *  - "letterOut": letter fully out + enlarged
+ *  - "open": top flap opens, card peeks up slightly
+ *  - "slideUp": card slides up further, revealing full height
+ *  - "scaleUp": card scales up to 1.3x and centers on screen
  */
 export default function EnvelopeClassic({ phase, children }) {
   // optional: scale wrapper responsively

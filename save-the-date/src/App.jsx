@@ -13,8 +13,9 @@ export default function App() {
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase("open"), 1200);
-    const t2 = setTimeout(() => setPhase("letterOut"), 1200 + 700);
-    return () => (clearTimeout(t1), clearTimeout(t2));
+    const t2 = setTimeout(() => setPhase("slideUp"), 1200 + 700);
+    const t3 = setTimeout(() => setPhase("scaleUp"), 1200 + 700 + 800);
+    return () => (clearTimeout(t1), clearTimeout(t2), clearTimeout(t3));
   }, []);
 
   const onFlip = () => !submitted && setShowBack((s) => !s);
