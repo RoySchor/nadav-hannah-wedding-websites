@@ -23,9 +23,11 @@ export default function EnvelopeClassic({ phase, children }) {
       <div className="lid one" />
       <div className="lid two" />
       <div className="envelope" />
-      <div className="letter">
-        {/* Put your card front here */}
-        <div className="letter-inner">{children}</div>
+      <div className="letter-viewport">
+        <div className="letter">
+          {/* Put your card front here */}
+          <div className="letter-inner">{children}</div>
+        </div>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent; /* wrapper has no color; body handles bg */
+  background: transparent;
   perspective: 1000px;
   z-index: 0;
 }
@@ -37,7 +37,6 @@ body {
   z-index: 3;
 }
 
-/* Top flaps (two layers give a nice open/close illusion) */
 .env-wrapper .lid {
   position: absolute;
   inset: 0;
@@ -53,22 +52,33 @@ body {
 }
 
 .env-wrapper .lid.one {
-  border-top: calc(var(--h) / 2) solid #f6f7fb; /* lighter top */
-  transform: rotateX(0deg); /* closed by default */
+  border-top: calc(var(--h) / 2) solid #f6f7fb;
+  transform: rotateX(0deg);
   z-index: 4;
-  transition-delay: 0.25s; /* only used when closing */
+  transition-delay: 0.25s;
   transition: transform var(--lid-one-dur) linear;
 }
 
 .env-wrapper .lid.two {
   opacity: 0;
   border-top: calc(var(--h) / 2) solid #eceff6; /* back of flap */
-  transform: rotateX(90deg); /* hidden under lid.one */
+  transform: rotateX(90deg);
   transition:
     transform var(--lid-two-dur) linear,
     opacity var(--lid-two-dur) linear;
   backface-visibility: visible;
   z-index: 2;
+}
+
+.env-wrapper .letter-viewport {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 16%;
+  height: 50%;
+  overflow: hidden;
 }
 
 /* Gold liner revealed when open (under the flap area) */
@@ -87,17 +97,15 @@ body {
 
 /* The letter/card */
 .env-wrapper .letter {
-  position: absolute;
-  top: 4%;
+  position: relative;
   width: 90%;
   height: 200%;
-  background: white;
   border-radius: 16px;
+  background: white;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
-  z-index: 2;
   transform: translateY(0) scale(1);
   transition: transform 0.6s ease;
-  display: flex;
+  z-index: 2;
   overflow: hidden;
 }
 
@@ -126,7 +134,6 @@ body {
   transition-delay: 0s;
 }
 .phase-open .lid.two {
-  /* transform: rotateX(180deg); */
   transform: rotateX(179.9deg) translateZ(0.01px);
   transition-delay: calc(var(--lid-one-dur) + var(--lid-gap));
   opacity: 1;
@@ -139,15 +146,22 @@ body {
 /* LETTER OUT — the letter slides fully out and enlarges, covering half the envelope */
 .phase-letterOut .lid.one {
   transform: rotateX(90deg);
+  z-index: 5;
 }
 .phase-letterOut .lid.two {
   transform: rotateX(179.9deg) translateZ(0.01px);
   transition-delay: 0s;
   opacity: 1;
 }
-/* translate further up; enlarge slightly; still centered */
+
 .phase-letterOut .letter {
   transform: translateY(calc(-1 * (var(--h) * 0.45))) scale(1.5);
   z-index: 10;
   transition: transform 0.6s ease 0.1s;
+}
+
+.phase-letterOut .letter-viewport {
+  overflow: visible;
+  pointer-events: none;
+  height: 100%;
 }
