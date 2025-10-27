@@ -40,14 +40,17 @@ export default function App() {
       <div className="w-[min(480px,96vw)]">
         <EnvelopeClassic phase={phase} flipRotation={showBack ? 180 : 0}>
           {/* FRONT/BACK content inside the letter */}
-          <div className="w-full h-full relative" onClick={onFlip}>
-            {/* Card Front - visible when not flipped */}
+          <div className="w-full h-full relative">
+            {/* Card Front - visible when not flipped, clickable to flip */}
             <div
               className="absolute inset-0"
               style={{
                 opacity: showBack ? 0 : 1,
                 transition: "opacity 0.3s",
+                cursor: phase === "scaleUp" && !showBack ? "pointer" : "default",
+                pointerEvents: showBack ? "none" : "auto",
               }}
+              onClick={!showBack ? onFlip : undefined}
             >
               <CardFront />
             </div>
@@ -58,9 +61,10 @@ export default function App() {
                 transform: "scaleX(-1)", // Counter the parent's 180° rotation mirroring
                 opacity: showBack ? 1 : 0,
                 transition: "opacity 0.3s",
+                pointerEvents: showBack ? "auto" : "none",
               }}
             >
-              <CardBack onSubmit={onSubmit} isSubmitting={isSubmitting} />
+              <CardBack onSubmit={onSubmit} isSubmitting={isSubmitting} onFlipBack={onFlip} />
             </div>
           </div>
         </EnvelopeClassic>
