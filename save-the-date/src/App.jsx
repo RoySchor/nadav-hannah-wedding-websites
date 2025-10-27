@@ -12,8 +12,8 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase("open"), 2500);
-    const t2 = setTimeout(() => setPhase("letterOut"), 2500 + 800);
+    const t1 = setTimeout(() => setPhase("open"), 1200);
+    const t2 = setTimeout(() => setPhase("letterOut"), 1200 + 700);
     return () => (clearTimeout(t1), clearTimeout(t2));
   }, []);
 

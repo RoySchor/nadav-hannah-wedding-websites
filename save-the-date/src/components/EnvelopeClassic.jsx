@@ -11,9 +11,8 @@ export default function EnvelopeClassic({ phase, children }) {
   // optional: scale wrapper responsively
   const style = useMemo(
     () => ({
-      // base size; wrapper will scale down on small screens
-      "--env-w": "320px",
-      "--env-h": "220px",
+      "--env-w": "440px",
+      "--env-h": "300px",
     }),
     []
   );
