@@ -1,20 +1,14 @@
 import React from "react";
+import "./CardBack.css";
 
 export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
   return (
-    <form
-      onSubmit={onSubmit}
-      className="w-full h-full bg-white rounded-2xl shadow-xl overflow-hidden p-6 flex flex-col"
-    >
+    <form onSubmit={onSubmit} className="card-back-form">
       {/* Back button */}
-      <button
-        type="button"
-        onClick={onFlipBack}
-        className="self-start mb-3 text-stone-500 hover:text-stone-700 flex items-center gap-1 text-sm transition-colors"
-      >
+      <button type="button" onClick={onFlipBack} className="back-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4"
+          className="back-button-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -29,45 +23,36 @@ export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
         Back
       </button>
 
-      <div className="flex-1 flex flex-col justify-center">
-        <h2 className="text-center font-medium text-stone-700 mb-4">We'd love to stay in touch</h2>
-        <div className="space-y-3">
+      <div className="form-content">
+        <h2 className="form-title">We'd love to stay in touch</h2>
+        <div className="form-fields">
           <div>
-            <label className="block text-xs text-stone-500 mb-1">Name</label>
-            <input
-              required
-              name="name"
-              className="w-full rounded-xl border border-stone-300 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-400"
-              placeholder="Jane Doe"
-            />
+            <label className="form-field-label">Name</label>
+            <input required name="name" className="form-field-input" placeholder="Jane Doe" />
           </div>
           <div>
-            <label className="block text-xs text-stone-500 mb-1">Email</label>
+            <label className="form-field-label">Email</label>
             <input
               required
               type="email"
               name="email"
-              className="w-full rounded-xl border border-stone-300 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-400"
+              className="form-field-input"
               placeholder="jane@email.com"
             />
           </div>
           <div>
-            <label className="block text-xs text-stone-500 mb-1">Address</label>
+            <label className="form-field-label">Address</label>
             <input
               name="address"
-              className="w-full rounded-xl border border-stone-300 px-3 py-2 outline-none focus:ring-2 focus:ring-stone-400"
+              className="form-field-input"
               placeholder="123 Maple St, City, ST"
             />
           </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full mt-2 rounded-xl bg-stone-800 text-stone-100 py-2 font-medium disabled:opacity-50"
-          >
+          <button type="submit" disabled={isSubmitting} className="submit-button">
             {isSubmitting ? "Sending…" : "Send"}
           </button>
         </div>
-        <p className="text-[10px] text-center text-stone-400 mt-4">
+        <p className="form-disclaimer">
           (The form doesn't submit anywhere yet — hook it to Google Sheets later.)
         </p>
       </div>

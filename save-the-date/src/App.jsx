@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import EnvelopeClassic from "./components/EnvelopeClassic";
 import CardFront from "./components/CardFront";
 import CardBack from "./components/CardBack";
 import ThankYou from "./components/ThankYou";
+import "./App.css";
 
 export default function App() {
   const [phase, setPhase] = useState("closed");
@@ -36,17 +37,16 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-dvh bg-stone-50 flex items-center justify-center px-4 py-10">
-      <div className="w-[min(480px,96vw)]">
+    <div className="app-container">
+      <div className="app-content">
         <EnvelopeClassic phase={phase} flipRotation={showBack ? 180 : 0}>
           {/* FRONT/BACK content inside the letter */}
-          <div className="w-full h-full relative">
+          <div className="card-wrapper">
             {/* Card Front - visible when not flipped, clickable to flip */}
             <div
-              className="absolute inset-0"
+              className="card-side card-front"
               style={{
                 opacity: showBack ? 0 : 1,
-                transition: "opacity 0.3s",
                 cursor: phase === "scaleUp" && !showBack ? "pointer" : "default",
                 pointerEvents: showBack ? "none" : "auto",
               }}
@@ -56,11 +56,9 @@ export default function App() {
             </div>
             {/* Card Back - visible when flipped, needs to be counter-rotated */}
             <div
-              className="absolute inset-0"
+              className="card-side card-back"
               style={{
-                transform: "scaleX(-1)", // Counter the parent's 180° rotation mirroring
                 opacity: showBack ? 1 : 0,
-                transition: "opacity 0.3s",
                 pointerEvents: showBack ? "auto" : "none",
               }}
             >

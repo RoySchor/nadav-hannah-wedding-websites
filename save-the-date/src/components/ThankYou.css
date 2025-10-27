@@ -1,0 +1,33 @@
+.thank-you-container {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thank-you-title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.thank-you-message {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #57534e;
+}
+
+.thank-you-button {
+  border-radius: 0.75rem;
+  background-color: #292524;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.thank-you-button:hover {
+  background-color: #1c1917;
+}

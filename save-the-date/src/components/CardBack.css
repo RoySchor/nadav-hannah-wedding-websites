@@ -1,0 +1,104 @@
+.card-back-form {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 0.75rem;
+  color: #78716c;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #44403c;
+}
+
+.back-button-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.form-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 500;
+  color: #44403c;
+  margin-bottom: 1rem;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-field-label {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #78716c;
+  margin-bottom: 0.25rem;
+}
+
+.form-field-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #d6d3d1;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+
+.form-field-input:focus {
+  ring: 2px;
+  ring-color: #a8a29e;
+  box-shadow: 0 0 0 2px #a8a29e;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: #292524;
+  color: #f5f5f4;
+  padding: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-disclaimer {
+  font-size: 10px;
+  text-align: center;
+  color: #a8a29e;
+  margin-top: 1rem;
+}
