@@ -126,7 +126,7 @@ body {
 }
 
 .phase-open .letter {
-  transform: translateY(-6%) scale(1.02);
+  transform: translateY(-18%) scale(1.05);
 }
 
 /* LETTER OUT — the letter slides fully out and enlarges, covering half the envelope */
