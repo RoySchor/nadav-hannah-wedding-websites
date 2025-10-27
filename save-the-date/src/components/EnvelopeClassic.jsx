@@ -12,8 +12,8 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
   // optional: scale wrapper responsively
   const style = useMemo(
     () => ({
-      "--env-w": "440px",
-      "--env-h": "300px",
+      "--env-w": "540px",
+      "--env-h": "420px",
     }),
     []
   );

@@ -4,8 +4,9 @@
 
 .torn-image {
   width: 100%;
-  height: 14rem;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
   user-select: none;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
