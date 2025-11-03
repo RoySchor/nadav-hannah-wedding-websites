@@ -209,11 +209,15 @@ body {
 
 /* Mobile responsive scaling */
 @media (max-width: 768px) {
+  .env-wrapper {
+    width: min(var(--w), 98vw);
+  }
+
   .phase-scaleUp .letter {
-    transform: translateY(calc(-1 * (var(--h) * 0.45))) scale(1.1) !important;
+    transform: translateY(calc(-1 * (var(--h) * 0.5))) scale(1.15) !important;
   }
 
   .phase-slideUp .letter {
-    transform: translateY(calc(-1 * (var(--h) * 0.85))) scale(1.05) !important;
+    transform: translateY(calc(-1 * (var(--h) * 0.88))) scale(1.05) !important;
   }
 }

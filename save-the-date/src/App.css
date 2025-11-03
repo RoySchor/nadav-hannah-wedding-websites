@@ -46,6 +46,8 @@
 @media (max-width: 768px) {
   .app-container {
     padding: 1rem 0.5rem;
+    justify-content: flex-start;
+    padding-top: 2rem;
   }
 
   .app-content {

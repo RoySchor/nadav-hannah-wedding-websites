@@ -32,7 +32,7 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
   // Responsive dimensions based on screen size
   const style = useMemo(() => {
     if (screenSize === "mobile") {
-      return { "--env-w": "280px", "--env-h": "220px" };
+      return { "--env-w": "300px", "--env-h": "260px" };
     } else if (screenSize === "tablet") {
       return { "--env-w": "400px", "--env-h": "320px" };
     }
@@ -47,8 +47,8 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
     let scale = "1.3";
 
     if (screenSize === "mobile") {
-      translateX = "translateX(-25%)";
-      scale = "1.1";
+      translateX = "translateX(0%)";
+      scale = "1.15";
     } else if (screenSize === "tablet") {
       translateX = "translateX(-40%)";
       scale = "1.2";
