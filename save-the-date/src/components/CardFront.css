@@ -43,3 +43,59 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
+/* Tablet responsive adjustments (iPad) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-front-content {
+    padding: 1.25rem;
+  }
+
+  .card-front-subtitle {
+    font-size: 0.6875rem;
+    letter-spacing: 0.175em;
+  }
+
+  .card-front-date {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  .card-front-location {
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
+  }
+
+  .card-front-instruction {
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
+    margin-top: 0.875rem;
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .card-front-content {
+    padding: 1rem;
+  }
+
+  .card-front-subtitle {
+    font-size: 0.625rem;
+    letter-spacing: 0.15em;
+  }
+
+  .card-front-date {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .card-front-location {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+
+  .card-front-instruction {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    margin-top: 0.75rem;
+  }
+}

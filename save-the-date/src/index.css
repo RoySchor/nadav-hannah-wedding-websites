@@ -32,6 +32,13 @@ body {
   z-index: 0;
 }
 
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .env-wrapper {
+    width: min(var(--w), 95vw);
+  }
+}
+
 /* The clickable/visual envelope body */
 .env-wrapper .envelope {
   position: absolute;
@@ -187,4 +194,26 @@ body {
   overflow: visible;
   pointer-events: none;
   height: 100%;
+}
+
+/* Tablet responsive scaling (iPad) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .phase-scaleUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.45))) scale(1.2) !important;
+  }
+
+  .phase-slideUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.88))) scale(1.05) !important;
+  }
+}
+
+/* Mobile responsive scaling */
+@media (max-width: 768px) {
+  .phase-scaleUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.45))) scale(1.1) !important;
+  }
+
+  .phase-slideUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.85))) scale(1.05) !important;
+  }
 }
