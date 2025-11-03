@@ -47,10 +47,12 @@
   .app-container {
     padding: 1rem 0.5rem;
     justify-content: flex-start;
+    align-items: center;
     padding-top: 2rem;
   }
 
   .app-content {
     width: min(380px, 98vw);
+    margin: 0 auto;
   }
 }

@@ -35,7 +35,8 @@ body {
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .env-wrapper {
-    width: min(var(--w), 95vw);
+    width: min(var(--w), 98vw);
+    margin: 0 auto;
   }
 }
 
