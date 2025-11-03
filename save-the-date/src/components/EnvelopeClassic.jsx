@@ -9,38 +9,35 @@ import clsx from "clsx";
  *  - "scaleUp": card scales up to 1.3x and centers on screen
  */
 export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
-  const [screenSize, setScreenSize] = useState('desktop');
+  const [screenSize, setScreenSize] = useState("desktop");
 
   useEffect(() => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
       if (width <= 768) {
-        setScreenSize('mobile');
+        setScreenSize("mobile");
       } else if (width <= 1024) {
-        setScreenSize('tablet');
+        setScreenSize("tablet");
       } else {
-        setScreenSize('desktop');
+        setScreenSize("desktop");
       }
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   // Responsive dimensions based on screen size
-  const style = useMemo(
-    () => {
-      if (screenSize === 'mobile') {
-        return { "--env-w": "280px", "--env-h": "220px" };
-      } else if (screenSize === 'tablet') {
-        return { "--env-w": "400px", "--env-h": "320px" };
-      }
-      return { "--env-w": "540px", "--env-h": "420px" };
-    },
-    [screenSize]
-  );
+  const style = useMemo(() => {
+    if (screenSize === "mobile") {
+      return { "--env-w": "280px", "--env-h": "220px" };
+    } else if (screenSize === "tablet") {
+      return { "--env-w": "400px", "--env-h": "320px" };
+    }
+    return { "--env-w": "540px", "--env-h": "420px" };
+  }, [screenSize]);
 
   // Compute the transform based on phase
   const getTransform = () => {
@@ -49,10 +46,10 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
     let translateX = "translateX(-75%)";
     let scale = "1.3";
 
-    if (screenSize === 'mobile') {
+    if (screenSize === "mobile") {
       translateX = "translateX(-25%)";
       scale = "1.1";
-    } else if (screenSize === 'tablet') {
+    } else if (screenSize === "tablet") {
       translateX = "translateX(-40%)";
       scale = "1.2";
     }

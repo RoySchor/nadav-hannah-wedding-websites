@@ -10,6 +10,8 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  /* Counter the parent scaleX(-1) to make text readable */
+  transform: scaleX(-1);
 }
 
 .back-button {
