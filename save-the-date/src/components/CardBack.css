@@ -70,9 +70,27 @@
   border: 1px solid #d6d3d1;
   padding: 0.5rem 0.75rem;
   outline: none;
+  font-family: inherit;
 }
 
 .form-field-input:focus {
+  ring: 2px;
+  ring-color: #a8a29e;
+  box-shadow: 0 0 0 2px #a8a29e;
+}
+
+.form-field-textarea {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #d6d3d1;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.form-field-textarea:focus {
   ring: 2px;
   ring-color: #a8a29e;
   box-shadow: 0 0 0 2px #a8a29e;

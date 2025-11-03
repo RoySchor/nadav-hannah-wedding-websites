@@ -27,8 +27,8 @@ export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
         <h2 className="form-title">We'd love to stay in touch</h2>
         <div className="form-fields">
           <div>
-            <label className="form-field-label">Name</label>
-            <input required name="name" className="form-field-input" placeholder="Jane Doe" />
+            <label className="form-field-label">Full Name</label>
+            <input required name="fullName" className="form-field-input" placeholder="Roy Schor" />
           </div>
           <div>
             <label className="form-field-label">Email</label>
@@ -37,15 +37,26 @@ export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
               type="email"
               name="email"
               className="form-field-input"
-              placeholder="jane@email.com"
+              placeholder="jane@gmail.com"
             />
           </div>
           <div>
-            <label className="form-field-label">Address</label>
+            <label className="form-field-label">Phone Number</label>
             <input
-              name="address"
+              required
+              type="tel"
+              name="phone"
               className="form-field-input"
-              placeholder="123 Maple St, City, ST"
+              placeholder="555 123-4567"
+            />
+          </div>
+          <div>
+            <label className="form-field-label">Full Mailing Address</label>
+            <textarea
+              name="address"
+              className="form-field-textarea"
+              placeholder="123 Maple Street&#10;City, State 12345"
+              rows="3"
             />
           </div>
           <button type="submit" disabled={isSubmitting} className="submit-button">
