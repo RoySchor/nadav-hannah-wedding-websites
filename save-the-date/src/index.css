@@ -173,6 +173,10 @@ body {
   height: 100%;
 }
 
+.phase-slideUp .envelope {
+  border-top: calc(var(--h) / 2) solid #a2b8f98e;
+}
+
 /* SCALE UP — card fully out, now scales up and centers */
 .phase-scaleUp .lid.one {
   transform: rotateX(90deg);
@@ -195,6 +199,10 @@ body {
   overflow: visible;
   pointer-events: none;
   height: 100%;
+}
+
+.phase-scaleUp .envelope {
+  border-top: calc(var(--h) / 2) solid #a2b8f98e;
 }
 
 /* Tablet responsive scaling (iPad) */

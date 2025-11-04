@@ -3,7 +3,7 @@ import "./CardBack.css";
 
 export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
   return (
-    <form onSubmit={onSubmit} className="card-back-form">
+    <div className="card-back-form">
       {/* Back button */}
       <button type="button" onClick={onFlipBack} className="back-button">
         <svg
@@ -22,51 +22,15 @@ export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
         </svg>
         Back
       </button>
-
-      <div className="form-content">
-        <h2 className="form-title">We'd love to stay in touch</h2>
-        <div className="form-fields">
-          <div>
-            <label className="form-field-label">Full Name</label>
-            <input required name="fullName" className="form-field-input" placeholder="Roy Schor" />
-          </div>
-          <div>
-            <label className="form-field-label">Email</label>
-            <input
-              required
-              type="email"
-              name="email"
-              className="form-field-input"
-              placeholder="jane@gmail.com"
-            />
-          </div>
-          <div>
-            <label className="form-field-label">Phone Number</label>
-            <input
-              required
-              type="tel"
-              name="phone"
-              className="form-field-input"
-              placeholder="555 123-4567"
-            />
-          </div>
-          <div>
-            <label className="form-field-label">Full Mailing Address</label>
-            <textarea
-              name="address"
-              className="form-field-textarea"
-              placeholder="123 Maple Street&#10;City, State 12345"
-              rows="3"
-            />
-          </div>
-          <button type="submit" disabled={isSubmitting} className="submit-button">
-            {isSubmitting ? "Sending…" : "Send"}
-          </button>
-        </div>
-        <p className="form-disclaimer">
-          (The form doesn't submit anywhere yet — hook it to Google Sheets later.)
-        </p>
-      </div>
-    </form>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeBOHZPU_VMMgh621pS4oMFOFJj0Cf2nT0dNXXZIts8TkdPUg/viewform?embedded=true"
+        className="google-form-iframe"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      >
+        Loading…
+      </iframe>
+    </div>
   );
 }
