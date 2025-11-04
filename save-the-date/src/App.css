@@ -40,6 +40,10 @@
   .app-content {
     width: min(440px, 96vw);
   }
+
+  .card-back {
+    transform: scaleX(-1);
+  }
 }
 
 /* Mobile responsive adjustments */
@@ -54,5 +58,9 @@
   .app-content {
     width: min(380px, 98vw);
     margin: 0 auto;
+  }
+
+  .card-back {
+    transform: scaleX(-1);
   }
 }
