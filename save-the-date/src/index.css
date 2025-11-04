@@ -205,6 +205,13 @@ body {
   border-top: calc(var(--h) / 2) solid #a2b8f98e;
 }
 
+@media (min-width: 1440px) {
+  .env-wrapper .letter {
+    width: 90%;
+    height: 200%;
+  }
+}
+
 /* Tablet responsive scaling (iPad) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .phase-scaleUp .letter {

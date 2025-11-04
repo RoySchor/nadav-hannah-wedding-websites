@@ -41,91 +41,6 @@
   width: 1rem;
 }
 
-.form-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form-title {
-  text-align: center;
-  font-weight: 500;
-  color: #44403c;
-  margin-bottom: 1rem;
-}
-
-.form-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.form-field-label {
-  display: block;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #78716c;
-  margin-bottom: 0.25rem;
-}
-
-.form-field-input {
-  width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid #d6d3d1;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-  font-family: inherit;
-}
-
-.form-field-input:focus {
-  ring: 2px;
-  ring-color: #a8a29e;
-  box-shadow: 0 0 0 2px #a8a29e;
-}
-
-.form-field-textarea {
-  width: 100%;
-  border-radius: 0.75rem;
-  border: 1px solid #d6d3d1;
-  padding: 0.5rem 0.75rem;
-  outline: none;
-  font-family: inherit;
-  resize: vertical;
-  min-height: 4rem;
-}
-
-.form-field-textarea:focus {
-  ring: 2px;
-  ring-color: #a8a29e;
-  box-shadow: 0 0 0 2px #a8a29e;
-}
-
-.submit-button {
-  width: 100%;
-  margin-top: 0.5rem;
-  border-radius: 0.75rem;
-  background-color: #292524;
-  color: #f5f5f4;
-  padding: 0.5rem;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.submit-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.form-disclaimer {
-  font-size: 10px;
-  text-align: center;
-  color: #a8a29e;
-  margin-top: 1rem;
-}
-
 /* Tablet responsive adjustments (iPad) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card-back-form {
@@ -135,39 +50,6 @@
   .back-button {
     font-size: 0.8125rem;
     margin-bottom: 0.625rem;
-  }
-
-  .form-title {
-    font-size: 0.9375rem;
-    margin-bottom: 0.875rem;
-  }
-
-  .form-fields {
-    gap: 0.625rem;
-  }
-
-  .form-field-label {
-    font-size: 0.6875rem;
-  }
-
-  .form-field-input,
-  .form-field-textarea {
-    padding: 0.4375rem 0.625rem;
-    font-size: 0.9375rem;
-  }
-
-  .form-field-textarea {
-    min-height: 3.5rem;
-  }
-
-  .submit-button {
-    padding: 0.4375rem;
-    font-size: 0.9375rem;
-  }
-
-  .form-disclaimer {
-    font-size: 9px;
-    margin-top: 0.875rem;
   }
 }
 
@@ -180,39 +62,6 @@
   .back-button {
     font-size: 0.78rem;
     margin-bottom: 0.6rem;
-  }
-
-  .form-title {
-    font-size: 0.9rem;
-    margin-bottom: 0.85rem;
-  }
-
-  .form-fields {
-    gap: 0.6rem;
-  }
-
-  .form-field-label {
-    font-size: 0.68rem;
-  }
-
-  .form-field-input,
-  .form-field-textarea {
-    padding: 0.42rem 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  .form-field-textarea {
-    min-height: 3.5rem;
-  }
-
-  .submit-button {
-    padding: 0.42rem;
-    font-size: 0.9rem;
-  }
-
-  .form-disclaimer {
-    font-size: 9px;
-    margin-top: 0.85rem;
   }
 }
 
@@ -231,41 +80,5 @@
   .back-button-icon {
     height: 0.875rem;
     width: 0.875rem;
-  }
-
-  .form-title {
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .form-fields {
-    gap: 0.5rem;
-  }
-
-  .form-field-label {
-    font-size: 0.625rem;
-  }
-
-  .form-field-input,
-  .form-field-textarea {
-    padding: 0.375rem 0.5rem;
-    font-size: 0.875rem;
-    border-radius: 0.5rem;
-  }
-
-  .form-field-textarea {
-    min-height: 3rem;
-  }
-
-  .submit-button {
-    padding: 0.375rem;
-    font-size: 0.875rem;
-    border-radius: 0.5rem;
-    margin-top: 0.375rem;
-  }
-
-  .form-disclaimer {
-    font-size: 8px;
-    margin-top: 0.75rem;
   }
 }
