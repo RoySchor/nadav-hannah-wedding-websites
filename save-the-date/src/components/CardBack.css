@@ -127,6 +127,8 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .card-back-form {
     padding: 1.25rem;
+    /* Counter the parent scaleX(-1) to make text readable */
+    transform: scaleX(-1);
   }
 
   .back-button {
