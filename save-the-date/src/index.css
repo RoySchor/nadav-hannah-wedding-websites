@@ -233,6 +233,10 @@ body {
     width: min(var(--w), 98vw);
   }
 
+  .env-wrapper .letter {
+    width: 100%;
+  }
+
   .phase-scaleUp .letter {
     transform: translateY(calc(-1 * (var(--h) * 0.5))) scale(1.15) !important;
   }
