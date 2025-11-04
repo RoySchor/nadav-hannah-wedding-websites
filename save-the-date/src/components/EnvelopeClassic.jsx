@@ -45,7 +45,7 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
 
   // Compute the transform based on phase
   const getTransform = () => {
-    const rotate = `rotateY(${flipRotation}deg)`;
+    // No rotation - just fade between front/back
     // Reduce horizontal movement on mobile and tablet
     let translateX = "translateX(-75%)";
     let scale = "1.3";
@@ -63,15 +63,15 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
 
     switch (phase) {
       case "closed":
-        return `translateY(0) scale(1) ${rotate}`;
+        return `translateY(0) scale(1)`;
       case "open":
-        return `translateY(-18%) scale(1.05) ${rotate}`;
+        return `translateY(-18%) scale(1.05)`;
       case "slideUp":
-        return `translateY(calc(-1 * (var(--env-h, 300px) * 0.9))) scale(1.05) ${rotate}`;
+        return `translateY(calc(-1 * (var(--env-h, 300px) * 0.9))) scale(1.05)`;
       case "scaleUp":
-        return `${translateX} translateY(calc(-1 * (var(--env-h, 300px) * 0.45))) scale(${scale}) ${rotate}`;
+        return `${translateX} translateY(calc(-1 * (var(--env-h, 300px) * 0.45))) scale(${scale})`;
       default:
-        return `translateY(0) scale(1) ${rotate}`;
+        return `translateY(0) scale(1)`;
     }
   };
 

@@ -126,12 +126,6 @@
   margin-top: 1rem;
 }
 
-@media (min-width: 1440px) {
-  .card-back-form {
-    transform: scaleX(-1);
-  }
-}
-
 /* Tablet responsive adjustments (iPad) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card-back-form {
