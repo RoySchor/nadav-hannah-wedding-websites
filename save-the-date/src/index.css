@@ -208,6 +208,17 @@ body {
   }
 }
 
+/* Small Desktop/Laptop responsive scaling (13" laptops, etc) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .phase-scaleUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.45))) scale(1.18) !important;
+  }
+
+  .phase-slideUp .letter {
+    transform: translateY(calc(-1 * (var(--h) * 0.89))) scale(1.05) !important;
+  }
+}
+
 /* Mobile responsive scaling */
 @media (max-width: 768px) {
   .env-wrapper {

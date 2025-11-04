@@ -18,6 +18,8 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
         setScreenSize("mobile");
       } else if (width <= 1024) {
         setScreenSize("tablet");
+      } else if (width <= 1440) {
+        setScreenSize("small-desktop");
       } else {
         setScreenSize("desktop");
       }
@@ -35,6 +37,8 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
       return { "--env-w": "300px", "--env-h": "260px" };
     } else if (screenSize === "tablet") {
       return { "--env-w": "400px", "--env-h": "320px" };
+    } else if (screenSize === "small-desktop") {
+      return { "--env-w": "420px", "--env-h": "330px" };
     }
     return { "--env-w": "540px", "--env-h": "420px" };
   }, [screenSize]);
@@ -52,6 +56,9 @@ export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
     } else if (screenSize === "tablet") {
       translateX = "translateX(-40%)";
       scale = "1.2";
+    } else if (screenSize === "small-desktop") {
+      translateX = "translateX(-45%)";
+      scale = "1.18";
     }
 
     switch (phase) {

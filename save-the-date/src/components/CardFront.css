@@ -72,6 +72,34 @@
   }
 }
 
+/* Small Desktop/Laptop responsive adjustments (13" laptops, etc) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .card-front-content {
+    padding: 1.2rem;
+  }
+
+  .card-front-subtitle {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+
+  .card-front-date {
+    font-size: 1.08rem;
+    line-height: 1.58rem;
+  }
+
+  .card-front-location {
+    font-size: 0.82rem;
+    line-height: 1.18rem;
+  }
+
+  .card-front-instruction {
+    font-size: 0.82rem;
+    line-height: 1.18rem;
+    margin-top: 0.85rem;
+  }
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .card-front-content {

@@ -39,9 +39,16 @@
   .app-content {
     width: min(440px, 96vw);
   }
+}
 
-  .card-back {
-    transform: scaleX(-1);
+/* Small Desktop/Laptop responsive adjustments (13" laptops, etc) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .app-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .app-content {
+    width: min(460px, 92vw);
   }
 }
 
@@ -57,9 +64,5 @@
   .app-content {
     width: min(380px, 98vw);
     margin: 0 auto;
-  }
-
-  .card-back {
-    transform: scaleX(-1);
   }
 }
