@@ -11,4 +11,4 @@ A lightweight site where guests can submit their information to receive an offic
 
 **wedding-website**
 
-The main wedding site where guests can RSVP and browse or select gifts from the couple’s registry.
+The main wedding site where guests can RSVP.
