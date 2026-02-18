@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardBack.css";
 
-export default function CardBack({ onSubmit, isSubmitting, onFlipBack }) {
+export default function CardBack({ onFlipBack }) {
   return (
     <div className="card-back-form">
       {/* Back button */}

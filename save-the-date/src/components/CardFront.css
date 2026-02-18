@@ -20,19 +20,20 @@
 .card-front-subtitle {
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 1.0rem;
   line-height: 1rem;
   margin-bottom: 0.25rem;
 }
 
 .card-front-date {
-  font-size: 1.25rem;
+  font-size: 1.50rem;
   line-height: 1.75rem;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .card-front-location {
-  font-size: 0.875rem;
+  font-size: 1.08rem;
   line-height: 1.25rem;
   font-style: italic;
   color: #78716c;
@@ -40,7 +41,7 @@
 
 .card-front-instruction {
   margin-top: 1rem;
-  font-size: 0.75rem;
+  font-size: 1.0rem;
   line-height: 1.25rem;
 }
 

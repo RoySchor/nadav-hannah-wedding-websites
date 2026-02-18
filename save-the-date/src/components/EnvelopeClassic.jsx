@@ -8,7 +8,7 @@ import clsx from "clsx";
  *  - "slideUp": card slides up further, revealing full height
  *  - "scaleUp": card scales up to 1.3x and centers on screen
  */
-export default function EnvelopeClassic({ phase, children, flipRotation = 0 }) {
+export default function EnvelopeClassic({ phase, children }) {
   const [screenSize, setScreenSize] = useState("desktop");
 
   useEffect(() => {

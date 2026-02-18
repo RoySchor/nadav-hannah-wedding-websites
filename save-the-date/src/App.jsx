@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import EnvelopeClassic from "./components/EnvelopeClassic";
 import CardFront from "./components/CardFront";
 import CardBack from "./components/CardBack";
