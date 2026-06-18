@@ -7,7 +7,11 @@ This repository contains the code and packages for the various websites used lea
 
 **save-the-date**
 
-A lightweight site where guests can submit their information to receive an official wedding invitation and preliminary date details.
+### [ruschor.com](https://ruschor.com/)
+
+[![website](https://img.shields.io/website?label=website&url=https%3A%2F%2Fruschor.com%2F)](https://ruschor.com/)
+
+- A lightweight site where guests can submit their information to receive an official wedding invitation and preliminary date details.
 
 **wedding-website**
 
