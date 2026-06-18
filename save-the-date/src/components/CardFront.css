@@ -29,6 +29,14 @@
   font-size: 1.50rem;
   line-height: 1.75rem;
   font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.card-front-festivities {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-style: italic;
+  color: #57534e;
   margin-bottom: 0.5rem;
 }
 
@@ -61,6 +69,11 @@
     line-height: 1.625rem;
   }
 
+  .card-front-festivities {
+    font-size: 0.75rem;
+    line-height: 1.1rem;
+  }
+
   .card-front-location {
     font-size: 0.8125rem;
     line-height: 1.1875rem;
@@ -89,6 +102,11 @@
     line-height: 1.58rem;
   }
 
+  .card-front-festivities {
+    font-size: 0.72rem;
+    line-height: 1.1rem;
+  }
+
   .card-front-location {
     font-size: 0.82rem;
     line-height: 1.18rem;
@@ -115,6 +133,11 @@
   .card-front-date {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .card-front-festivities {
+    font-size: 0.65rem;
+    line-height: 1rem;
   }
 
   .card-front-location {
