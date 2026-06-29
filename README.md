@@ -1,18 +1,28 @@
-# Nadav & Hannah Wedding Website
-My brother is getting married — and the wedding industry is very costly. Fortunately for him, he has a brother who codes...
-
-This repository contains the code and packages for the various websites used leading up to the big day.
-
-## Packages
-
-**save-the-date**
-
-### [ruschor.com](https://ruschor.com/)
+# Nadav & Hannah — Save the Date
 
 [![website](https://img.shields.io/website?label=website&url=https%3A%2F%2Fruschor.com%2F)](https://ruschor.com/)
 
-- A lightweight site where guests can submit their information to receive an official wedding invitation and preliminary date details.
+My brother is getting married — and the wedding industry is very costly. Fortunately for him, he has a brother who codes...
 
-**wedding-website**
+## [ruschor.com](https://ruschor.com/)
 
-The main wedding site where guests can RSVP.
+An interactive save-the-date site where guests receive an animated envelope that opens to reveal the wedding details, and can submit their contact info via an embedded form to receive an official invitation.
+
+## Tech Stack
+
+- React 19 + Vite
+- Framer Motion (envelope/card animations)
+- Embedded Google Form for guest info collection
+- Deployed to GitHub Pages via GitHub Actions
+
+## Development
+
+```bash
+cd save-the-date
+npm install
+npm run dev
+```
+
+## Deployment
+
+Pushes to `main` automatically deploy to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
