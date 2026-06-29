@@ -8,13 +8,6 @@ My brother is getting married — and the wedding industry is very costly. Fortu
 
 An interactive save-the-date site where guests receive an animated envelope that opens to reveal the wedding details, and can submit their contact info via an embedded form to receive an official invitation.
 
-## Tech Stack
-
-- React 19 + Vite
-- Framer Motion (envelope/card animations)
-- Embedded Google Form for guest info collection
-- Deployed to GitHub Pages via GitHub Actions
-
 ## Development
 
 ```bash
